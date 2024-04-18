@@ -10,43 +10,43 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/index.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/28c2eb92f3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <section class="head">
-        <div id="logo_box">
-            <img src="images/" />
+    <header class="container">
+      <section class="head row align-items-center">
+        <div id="logo_box" class="box col-1">
+          <a href="index.html">
+            <img src="images/logo.png" alt="logo"/>
+          </a>
         </div>
-        <div class="input-group">
-            <div class="form-outline" data-mdb-input-init>
-                <input type="search" class="form-control">
-            </div>
-            <button type="button" class="btn btn-primary">
-                <span class="material-symbols-outlined">
-                    search
-                    </span>
-              </button>
-            </div>
-            
+        <div class="input-group col-md-auto">
+          <input type="search" class="form-control" placeholder="¿Qué buscas?"/>
+       
+          <button type="button" class="btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-        <div class="box">
+
+        <div class="box col-auto">
+          <i class="fa-solid fa-cart-shopping"></i>
         </div>
-      <div class="box">
-      </div>
+        <div class="box col-auto">
+          <i class="fa-solid fa-user"></i>
+        </div>
       </section>
     </header>
     <main>
       <section>
-        <nav class="nav nav-pills nav-fill">
-     
-          <a class="nav-link active"  href="index.html" >Inicio</a></li>
-          <a class="nav-link active" href="html/productos.html">Productos</a></li>
-          <a class="nav-link active" href="html/contacto.html">Contacto</a></li>
-          <a class="nav-link active" href="html/quienes_somos.html">Quienes Somos</a></li>
- 
+        <nav class="nav nav-pills nav-fill position-sticky">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="html/productos.html">Productos</a>
+          <a class="nav-link" href="html/contacto.html">Contacto</a>
+          <a class="nav-link" href="html/quienes_somos.html">Quienes Somos</a>
         </nav>
       </section>
       <section class="carrusel"></section>
@@ -54,9 +54,21 @@
     <footer>
       <section>
         <ul>
-          <li><a href="https://www.facebook.com">Facebook</a></li>
-          <li><a href="https://www.instagram.com">Instagram</a></li>
-          <li><a href="https://www.tiktok.com">Tik Tok</a></li>
+          <li>
+            <a href="https://www.facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </li>
         </ul>
       </section>
     </footer>

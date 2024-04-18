@@ -1,35 +1,83 @@
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
 :root {
-    --color-font: #f0f0f0;
-    --color-background: #191e20;
-    --color-over: #131618;
-    --color-hover: #3b4347;
+  --color-font: #213319;
+  --color-background: #a6d88d;
+  --color-focus: #44593a;
+  --color-hover: #8d91d9;
 }
 
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  font-size: 1rem;
+  font-family: "Montserrat";
 }
 
 header {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-.head{
-    margin-top: 1rem;
+a {
+  color: var(--color-font);
+}
+
+.head {
+  margin-top: 1rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-font);
+}
+
+.nav-link:hover {
+  color: var(--color-background);
+  background-color: var(--color-hover);
+}
+
+.input-group {
+  height: 1.2rem;
+  width: 28rem;
+}
+
+.btn {
+  background-color: var(--color-focus);
+}
+
+.btn:hover {
+  color: var(--color-background);
+  background-color: var(--color-hover);
+}
+
+.box {
+  cursor: pointer;
 }
 
 #logo_box {
-    float: left;
-    cursor: pointer;
-    margin: 0 1rem 1rem 1rem;
+    margin-right: 15rem;
+}
+
+#logo_box img {
+  width: 4rem;
 }
