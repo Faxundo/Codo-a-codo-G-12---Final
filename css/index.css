@@ -41,8 +41,13 @@ a {
   color: var(--color-font);
 }
 
+.nav {
+  margin-bottom: 1rem;
+}
+
 .head {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  height: 5rem;
 }
 
 .nav-link {
@@ -72,6 +77,12 @@ a {
 
 .box {
   cursor: pointer;
+}
+
+.carousel-item img{
+  border-radius: 30px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 #logo_box {

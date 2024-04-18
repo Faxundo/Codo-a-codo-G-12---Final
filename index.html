@@ -17,27 +17,26 @@
     ></script>
   </head>
   <body>
-    <header class="container">
-      <section class="head row align-items-center">
-        <div id="logo_box" class="box col-1">
+    <header>
+      <section class="head d-flex">
+        <div id="logo_box" class="box">
           <a href="index.html">
             <img src="images/logo.png" alt="logo"/>
           </a>
         </div>
-        <div class="input-group col-md-auto">
+        <div class="input-group ">
           <input type="search" class="form-control" placeholder="¿Qué buscas?"/>
        
           <button type="button" class="btn btn-primary">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-
-        <div class="box col-auto">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <div class="box col-auto">
-          <i class="fa-solid fa-user"></i>
-        </div>
+          <div class="box">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="box" >
+            <i class="fa-solid fa-user"></i>
+          </div>
       </section>
     </header>
     <main>
@@ -49,7 +48,32 @@
           <a class="nav-link" href="html/quienes_somos.html">Quienes Somos</a>
         </nav>
       </section>
-      <section class="carrusel"></section>
+      <section id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-dark">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/lapiz.png" class="d-block" alt="Lápices">
+          </div>
+          <div class="carousel-item">
+            <img src="images/cuaderno.png" class="d-block" alt="Cuadernos">
+          </div>
+          <div class="carousel-item">
+            <img src="images/tijera.png" class="d-block" alt="Tijeras">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
     </main>
     <footer>
       <section>
