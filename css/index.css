@@ -13,8 +13,12 @@
 :root {
   --color-font: #213319;
   --color-background: #a6d88d;
+  --color-background-complementary: #593A58;
   --color-focus: #44593a;
   --color-hover: #8d91d9;
+  --transition-1: ease-in-out 0.1s;
+  --transition-2: ease-in-out 0.2s;
+  --transition-4: ease-in-out 0.4s;
 }
 
 html {
@@ -30,7 +34,7 @@ body {
 
 header {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 ul {
@@ -41,13 +45,22 @@ a {
   color: var(--color-font);
 }
 
-.nav {
-  margin-bottom: 1rem;
+footer {
+  margin-top: 2rem;
+  background-color: var(--color-background-complementary);
 }
 
 .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 1.5rem;
   height: 5rem;
+  padding: 0 8%;
+}
+
+.nav {
+  margin-bottom: 1rem;
 }
 
 .nav-link {
@@ -59,14 +72,28 @@ a {
 .nav-link:hover {
   color: var(--color-background);
   background-color: var(--color-hover);
+  transition: var(--transition-4);
 }
 
 .input-group {
-  height: 1.2rem;
-  width: 28rem;
+  width: auto;
+}
+
+.input-group input {
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  text-indent: 7px;
+  width: 22rem;
+}
+
+.input-group input:focus {
+  outline: 4px solid var(--color-hover);
+  transition: var(--transition-1);
 }
 
 .btn {
+  color: white;
   background-color: var(--color-focus);
 }
 
@@ -79,14 +106,22 @@ a {
   cursor: pointer;
 }
 
-.carousel-item img{
+.box i {
+  padding: 0.7rem;
+  margin: 0.3rem;
+}
+
+.box i:hover {
+  color: var(--color-background);
+  background-color: var(--color-hover);
+  border-radius: 7px;
+  transition: var(--transition-2);
+}
+
+.carousel-item img {
   border-radius: 30px;
   width: 80%;
   margin-left: 10%;
-}
-
-#logo_box {
-    margin-right: 15rem;
 }
 
 #logo_box img {
