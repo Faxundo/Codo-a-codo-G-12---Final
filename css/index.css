@@ -12,10 +12,11 @@
 
 :root {
   --color-font: #213319;
-  --color-background: #a6d88d;
-  --color-background-complementary: #593A58;
-  --color-focus: #44593a;
-  --color-hover: #8d91d9;
+  --color-background: #A5D3A1;
+  --color-background-complementary: #5B2363;
+  --color-hover: #04AA6D;
+  --color-hover-complementary: #A343A3;
+  --color-black: #333333;
   --transition-1: ease-in-out 0.1s;
   --transition-2: ease-in-out 0.2s;
   --transition-4: ease-in-out 0.4s;
@@ -34,20 +35,36 @@ body {
 
 header {
   font-size: 1.2rem;
-  padding: 1rem;
-}
-
-ul {
-  list-style: none;
+  padding-bottom: 1rem;
 }
 
 a {
   color: var(--color-font);
+  text-decoration: none;
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 2rem;
+  padding: 2.3rem;
   background-color: var(--color-background-complementary);
+}
+
+footer span { 
+  font-size: 2.1rem;
+  margin: 1rem;
+}
+
+footer span a {
+  padding: .2rem .5rem;
+  color: white;
+}
+
+footer span a i:hover {
+  font-size: 2.7rem;
+  transition: var(--transition-2);
 }
 
 .head {
@@ -61,17 +78,17 @@ footer {
 
 .nav {
   margin-bottom: 1rem;
+  background-color: var(--color-background-complementary);
 }
 
 .nav-link {
   font-weight: 600;
-  text-decoration: none;
-  color: var(--color-font);
+  color: white;
 }
 
 .nav-link:hover {
   color: var(--color-background);
-  background-color: var(--color-hover);
+  background-color: var(--color-hover-complementary);
   transition: var(--transition-4);
 }
 
@@ -82,24 +99,24 @@ footer {
 .input-group input {
   outline: none;
   border: none;
-  border-radius: 7px;
+  border-radius: 10px;
   text-indent: 7px;
   width: 22rem;
 }
 
 .input-group input:focus {
-  outline: 4px solid var(--color-hover);
+  outline: 2px solid var(--color-hover-complementary);
   transition: var(--transition-1);
 }
 
 .btn {
   color: white;
-  background-color: var(--color-focus);
+  background-color: var(--color-hover);
 }
 
 .btn:hover {
   color: var(--color-background);
-  background-color: var(--color-hover);
+  background-color: var(--color-hover-complementary);
 }
 
 .box {
@@ -113,7 +130,7 @@ footer {
 
 .box i:hover {
   color: var(--color-background);
-  background-color: var(--color-hover);
+  background-color: var(--color-hover-complementary);
   border-radius: 7px;
   transition: var(--transition-2);
 }
