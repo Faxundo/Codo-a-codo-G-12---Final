@@ -24,7 +24,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 12px;  
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -211,6 +211,7 @@ li a:hover {
   transform: scale(1.1);
   transition: var(--transition-2);
   outline: 1px solid white;
+  cursor: pointer;
 }
 
 .btn-wsp a {
@@ -219,13 +220,23 @@ li a:hover {
 
 .card {
   cursor: pointer;
-
 }
 
 .card:hover {
-  outline: 4px solid var(--color-secondary-1);
   transform: scale(1.04);
   transition: var(--transition-3);
+}
+
+.price button {
+ margin-left: 1rem;
+}
+
+.price button:hover {
+  color: white;
+}
+
+.price p {
+  margin-bottom: 0;
 }
 
 #logo {
