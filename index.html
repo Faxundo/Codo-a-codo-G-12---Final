@@ -18,6 +18,7 @@
     ></script>
   </head>
   <body>
+
     <header>
       <section class="head">
         <div class="box">
@@ -38,7 +39,6 @@
         </div>
       </section>
     </header>
-
 
     <main>
       <section class="sticky-top">
@@ -127,6 +127,11 @@
         </div>
       </section>
     </footer>
+    
+ <!-- Whatsapp Sticky -->
+    <div class="btn-wsp">
+      <a href="https://wa.me/15771233293" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
 
     <!--Login Menu-->
     <div class="modal fade" id="staticBackdropLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -139,19 +144,50 @@
           <div class="modal-body">
             <form action="index.html" method="post">
               <div class="form-floating mb-3">
-                  <input type="email" class="form-control" name="email" id="femail" required>
-                  <label for="femail">Email</label>
+                  <input type="email" class="form-control" name="email" required>
+                  <label>Email</label>
               </div>                        
 
               <div class="form-floating mb-3">
-                  <input type="password" class="form-control" name="password" id="fpass" required >
-                  <label for="fpass">Contraseña</label>
+                  <input type="password" class="form-control" name="password" required >
+                  <label>Contraseña</label>
               </div>    
               <div class="modal-footer">
-                  <p>¿No tienes una cuenta aún? <a href="html/registro.html">Quiero Registrarme</a></p>
+                  <p>¿No tienes una cuenta aún? <p id="register" data-bs-toggle="modal" data-bs-target="#staticBackdropRegister">Quiero Registrarme</p></p>
                   <input type="submit" value="Iniciar Sesión" class="btn">
               </div>
           </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Register Menu-->
+    <div class="modal fade" id="staticBackdropRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Registrarse</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="index.html" method="post" class="container text-center ">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" name="email" required>
+                <label>Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="password" required>
+                <label>Contraseña</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="password-repeat"  required>
+                <label>Repetir contraseña</label>
+              </div>
+              <div>
+                <input type="submit" value="Registrarme" class="btn">
+              </div>
+            </form>
           </div>
         </div>
       </div>

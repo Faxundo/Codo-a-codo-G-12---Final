@@ -14,7 +14,7 @@
   --color-font: #213319;
   --color-primary-1: #a5d3a1;
   --color-primary-2: #04aa6d;
-  --color-primary-3: #18805A;
+  --color-primary-3: #18805a;
   --color-secondary-1: #a343a3;
   --color-secondary-2: #5b2363;
   --transition-1: ease-in-out 0.1s;
@@ -72,7 +72,7 @@ footer span a {
 }
 
 footer span a i:hover {
-  font-size: 2.7rem;
+  transform: scale(1.2);
   transition: var(--transition-2);
 }
 
@@ -165,8 +165,9 @@ li a:hover {
   margin-left: 10%;
 }
 
-.modal-footer a:hover {
+.modal-footer #register:hover {
   color: var(--color-primary-2);
+  cursor: pointer;
 }
 
 .btn-close:focus {
@@ -182,18 +183,30 @@ li a:hover {
   color: white;
 }
 
+.btn-wsp {
+  background-color: var(--color-primary-2);
+  font-size: 2.1rem;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.btn-wsp:hover {
+  transform: scale(1.1);
+  transition: var(--transition-2);
+}
+
+.btn-wsp a {
+  color: white;
+}
+
 #logo {
   width: 4rem;
-}
-
-
-.register {
-  width: 30rem;
-  height: 20rem;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.register input {
-  margin: 1.8rem 0;
 }
