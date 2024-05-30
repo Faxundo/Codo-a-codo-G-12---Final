@@ -239,6 +239,11 @@ li a:hover {
   margin-bottom: 0;
 }
 
+.error {
+  color: red;
+  margin-bottom: 1rem;
+}
+
 #logo {
   width: 4rem;
 }

@@ -36,6 +36,7 @@
         <div class="box">
           <a href="html/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
           <i class="fa-solid fa-user" data-bs-toggle="modal" data-bs-target="#staticBackdropLogin"></i>
+          <a class="btn" href="html/api.html">Conexión API</a>
         </div>
       </section>
     </header>
@@ -229,16 +230,19 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="index.html" method="post">
-              <div class="form-floating mb-3">
-                  <input type="email" class="form-control" name="email" required>
+            <form action="#" method="get" id="form-login">
+              <div class="form-floating mb-3" id="login">
+                  <input type="email" class="form-control" name="email" id="email">
                   <label>Email</label>
-              </div>                        
+              </div>      
+              <div class="error" id="error-email"></div>                  
 
               <div class="form-floating mb-3">
-                  <input type="password" class="form-control" name="password" required >
+                  <input type="password" class="form-control" name="password" id="password">
                   <label>Contraseña</label>
               </div>    
+              <div class="error" id="error-password"></div>      
+
               <div class="modal-footer">
                   <p>¿No tienes una cuenta aún? <p id="register" data-bs-toggle="modal" data-bs-target="#staticBackdropRegister">Quiero Registrarme</p></p>
                   <input type="submit" value="Iniciar Sesión" class="btn">
@@ -258,20 +262,26 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="index.html" method="post" class="container text-center ">
+            <form action="#" method="get" id="form-register">
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" name="email" required>
+                <input type="email" class="form-control" name="email" id="email-register">
                 <label>Email</label>
               </div>
+              <div class="error" id="error-register-email"></div>                
+
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="password" required>
+                <input type="password" class="form-control" name="password" id="password-register">
                 <label>Contraseña</label>
               </div>
+              <div class="error" id="error-register-password"></div>                  
+
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="password-repeat"  required>
+                <input type="password" class="form-control" name="password-repeat" id="password-repeat">
                 <label>Repetir contraseña</label>
               </div>
-              <div>
+              <div class="error" id="error-password-repeat"></div>                  
+
+              <div class="modal-footer">
                 <input type="submit" value="Registrarme" class="btn">
               </div>
             </form>
@@ -286,4 +296,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <script src="js/script-index.js"></script>
 </html>
