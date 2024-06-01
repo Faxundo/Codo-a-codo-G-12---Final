@@ -19,38 +19,13 @@
   </head>
   <body>
 
-    <header>
-      <section class="head">
-        <div class="box">
-          <a href="index.html">
-            <img src="images/logo.png" alt="logo" id="logo"/>
-          </a>
-        </div>
-        <div class="input-group">
-          <input type="search" placeholder="¿Qué buscas?" />
-
-          <button type="button" class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-        <div class="box">
-          <a href="html/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          <i class="fa-solid fa-user" data-bs-toggle="modal" data-bs-target="#staticBackdropLogin"></i>
-          <a class="btn" href="html/api.html">Conexión API</a>
-        </div>
-      </section>
-    </header>
+    <div id="header" data-include-html="html/permanent/header.html"></div>
 
     <main>
+
       <!-- Nav -->
-      <section class="sticky-top">
-        <nav class="nav nav-pills nav-fill">
-          <a class="nav-link" href="#logo">Inicio</a>
-          <a class="nav-link" href="#productos">Productos</a>
-          <a class="nav-link" href="index.html">Contacto</a>
-          <a class="nav-link" href="index.html">Quienes Somos</a>
-        </nav>
-      </section>
+      <div id="nav" data-include-html="html/permanent/nav.html"></div>
+
       <!-- Carrusel -->
       <section id="carrusel" class="carousel slide carousel-fade carousel-dark">
         <div class="carousel-indicators">
@@ -193,33 +168,10 @@
     </main>
 
 
-    <footer>
-      <section>
-        <span>
-          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        </span>
-      <span>
-        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      </span>
-      <span>
-        <a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-      </span>
-      </section>
-      <section>
-        <div>
-          <ul class="d-flex justify-content-center">
-            <li><a href="">Terminos y condiciones</a></li>
-            <li><a href="">Preguntas frecuentes</a></li>
-            <li><a href="">Ayuda</a></li>
-          </ul>
-        </div>
-      </section>
-    </footer>
+    <div id="footer" data-include-html="html/permanent/footer.html"></div>
     
  <!-- Whatsapp Sticky -->
-    <div class="btn-wsp">
-      <a href="https://wa.me/15771233293" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
+ <div id="whatsapp-sticky" data-include-html="html/permanent/whatsapp-sticky.html"></div>
 
     <!--Login Menu-->
     <div class="modal fade" id="staticBackdropLogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -296,5 +248,6 @@
       crossorigin="anonymous"
     ></script>
   </body>
-  <script src="js/script-index.js"></script>
+  <script src="js/login-register.js"></script>
+  <script src="js/permanent-html.js"></script>
 </html>

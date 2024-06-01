@@ -1,0 +1,17 @@
+header p {
+    color: white;
+}
+
+.api-header #logo {
+    width: 7rem;
+  }
+
+.price {
+
+}
+
+.card img {
+    height: 10rem;
+    width: auto; 
+    object-fit: cover; 
+}
