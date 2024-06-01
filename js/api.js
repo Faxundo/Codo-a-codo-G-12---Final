@@ -21,7 +21,6 @@ const pintarCard = (data) => {
   const fragment = document.createDocumentFragment();
 
   for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
     const clone = template.cloneNode(true);
     clone.querySelector("img").setAttribute("src", data[i].image);
     clone.querySelector("h5").textContent = data[i].title;
