@@ -33,3 +33,15 @@ const pintarCard = (data) => {
 
   contenedor.appendChild(fragment);
 };
+
+
+
+function addProduct () {
+  let newProduct = {
+    category: document.querySelector("#category").value,
+    title: document.querySelector("#title").value,
+    description: document.querySelector("#description").value,
+    price: document.querySelector("#price").value,
+    url: document.querySelector("#url").value,
+  };
+}

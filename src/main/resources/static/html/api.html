@@ -26,6 +26,49 @@
         </div>
         <p class="d-flex justify-content-center">Librería</p>
       </header>
+
+    <!-- Agregar producto a la API -->
+      <div class="modal-dialog modal-dialog-centered product">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Añadir Producto</h1>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="get" id="addProduct">
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="category">
+                  <label>Categoría</label>
+              </div>                  
+
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="title">
+                  <label>Titulo</label>
+              </div> 
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="description">
+                <label>Descripción</label>
+            </div> 
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="price">
+              <label>Precio</label>
+          </div> 
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="url">
+            <label>Url</label>
+        </div> 
+
+              <div class="modal-footer">
+                  <input type="submit" value="Crear" class="btn" onclick="addProduct()">
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+          <!-- Contenedor para los objetos de la API -->
       <div id="contenedor" class="row row-cols-3 g-3 mx-5 mt-4"></div>
     </main>
 
@@ -46,6 +89,7 @@
         </section>
 
     </template>
+ 
 
     <div id="footer" data-include-html="permanent/footer.html"></div>
     <script

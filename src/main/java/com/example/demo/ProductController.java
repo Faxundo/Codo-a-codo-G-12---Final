@@ -43,7 +43,7 @@ public class ProductController {
     public void delProduct(@PathVariable("id") Integer id) {
 
         ProductDAO productDAO=new ProductDAO();
-        Product product = productDAO.search(id);
+        Product product = new Product(id);
         productDAO.del(product);
 
     }
