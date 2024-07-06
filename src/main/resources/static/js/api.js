@@ -1,6 +1,41 @@
 // const url = "https://fakestoreapi.com/products";
 const url = "http://localhost:8080";
 
+// Listar Productos en Tabla
+
+function getProducts() {
+      const respuesta = fetch(url + '/listarProduct');
+  
+      respuesta
+          .then(response => response.json())
+          .then(response => renderProducts(response))
+          .catch(error => dibujarError(error))
+    }
+  
+    function renderProducts(response) {
+      const productos = response;
+      let rows = '';
+      for(let prod of productos) {
+          rows += `
+          <tr>
+              <td>${prod.id}</td>
+              <td>${prod.title}</td>
+              <td>${prod.description}</td>
+              <td>${prod.price}</td>
+              <td>
+                <img src="${prod.url}" alt="" class="img-fluid">
+              </td>
+              <td>
+                <button>
+                  <i class="fa-solid fa-box-archive" onclick="delProduct(${prod.id})"></i>
+                </button>  
+              </td>
+          </tr>
+          `
+      }
+      document.querySelector('#productos').innerHTML = rows;
+  }
+
 // Listar Productos
 
 if (document.contains(document.querySelector("#carrusel"))) {

@@ -71,32 +71,30 @@
 
               <!-- Mostrar objetos de la API -->
                <div class="d-flex justify-content-center mostrar">
-                <div><button class="btn" onclick="fetchData()">Mostrar Productos</button></div>
+                <div><button class="btn" onclick="getProducts()">Mostrar Productos</button></div>
               </div>
              
           <!-- Contenedor para los objetos de la API -->
       <div id="contenedor" class="row row-cols-3 g-3 mx-5 mt-4"></div>
     </main>
 
-          <!-- Template para la creación de los productos de la API -->
-    <template id="template-card">
-        <section class="col"> 
-          <div class="card h-100">
-            <img class="card-img-top mx-auto d-block" alt="Imágen del producto">
-            <div class="card-body">
-              <h5 class="card-title text-center"></h5>
-              <p class="id"></p>
-              <p class="category"></p>
-              <p class="card-text description"></p>
-            </div>
-            <div class="price d-flex align-items-center justify-content-end mx-3 my-3">
-              <p class="precio mb-0"></p>
-          
-            </div>
-          </div>
-        </section>
+          <!-- Tabla para mostrar los productos de la API -->
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th>Imágen</th>
+                    <th>Operaciones</th>
+                </tr>
+            </thead>
+            <tbody id="productos">
 
-    </template>
+                    
+            </tbody>
+        </table>
  
 
     <div id="footer" data-include-html="permanent/footer.html"></div>
