@@ -36,38 +36,44 @@
           <div class="modal-body">
             <form action="#" method="get" id="addProduct">
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="category">
+                  <select class="form-control" id="category" name="category">
+                  </select>
                   <label>Categoría</label>
               </div>                  
 
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="title">
+                  <input type="text" class="form-control" id="title" name="title">
                   <label>Titulo</label>
               </div> 
 
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="description">
+                <input type="text" class="form-control" id="description" name="description">
                 <label>Descripción</label>
             </div> 
 
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="price">
+              <input type="text" class="form-control" id="price" name="price">
               <label>Precio</label>
           </div> 
 
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="url">
+            <input type="text" class="form-control" id="url" name="url">
             <label>Url</label>
         </div> 
 
               <div class="modal-footer">
-                  <input type="submit" value="Crear" class="btn" onclick="addProduct()">
+                  <input type="submit" value="Crear" class="btn">
               </div>
           </form>
           </div>
         </div>
       </div>
 
+              <!-- Mostrar objetos de la API -->
+               <div class="d-flex justify-content-center mostrar">
+                <div><button class="btn" onclick="fetchData()">Mostrar Productos</button></div>
+              </div>
+             
           <!-- Contenedor para los objetos de la API -->
       <div id="contenedor" class="row row-cols-3 g-3 mx-5 mt-4"></div>
     </main>
@@ -79,11 +85,13 @@
             <img class="card-img-top mx-auto d-block" alt="Imágen del producto">
             <div class="card-body">
               <h5 class="card-title text-center"></h5>
-              <p class="card-text"></p>
+              <p class="id"></p>
+              <p class="category"></p>
+              <p class="card-text description"></p>
             </div>
             <div class="price d-flex align-items-center justify-content-end mx-3 my-3">
               <p class="precio mb-0"></p>
-              <button class="btn"><i class="fa-solid fa-cart-shopping"></i></button>
+          
             </div>
           </div>
         </section>

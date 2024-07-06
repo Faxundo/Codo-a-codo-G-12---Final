@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.dao.CategoryDAO;
 import com.example.demo.dao.ProductDAO;
-import com.example.demo.model.Category;
 import com.example.demo.model.Product;
 
 @RestController
@@ -21,19 +19,14 @@ public class ProductController {
     @CrossOrigin(origins = "*")
     @GetMapping("/listarProduct")
     public List<Product> listarProduct() {
-        ProductDAO productDAO=new ProductDAO();
+        ProductDAO productDAO = new ProductDAO();
         return productDAO.listar();
     }
-    
+
     @CrossOrigin(origins = "*")
     @PostMapping("/addProduct")
-    public void addProduct(@RequestBody String category, String title, String description,  String price, String url) {
-    
-        CategoryDAO categoryDAO = new CategoryDAO();
-        Category category2 = categoryDAO.search(Integer.parseInt(category));
-        Product product = new Product(category2, title, description, Float.parseFloat(price), url);
-
-        ProductDAO productDAO= new ProductDAO();
+    public void addProduct(@RequestBody Product product) {
+        ProductDAO productDAO = new ProductDAO();
         productDAO.add(product);
 
     }
@@ -42,7 +35,7 @@ public class ProductController {
     @DeleteMapping("/delProduct/{id}")
     public void delProduct(@PathVariable("id") Integer id) {
 
-        ProductDAO productDAO=new ProductDAO();
+        ProductDAO productDAO = new ProductDAO();
         Product product = new Product(id);
         productDAO.del(product);
 
